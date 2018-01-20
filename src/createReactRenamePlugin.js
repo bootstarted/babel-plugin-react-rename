@@ -110,7 +110,10 @@ const createReactRenamePlugin = () => {
       // Ignore function expressions that aren't assigned to any variable.
       // e.g. func(() => <div/>); will be ignored.
       if (path.isArrowFunctionExpression() || path.isFunctionExpression()) {
-        if (!path.findParent((p) => p.isVariableDeclarator())) {
+        if (
+          !path.findParent((p) => p.isVariableDeclarator()) &&
+          !path.parentPath.isExportDefaultDeclaration()
+        ) {
           return;
         }
       }
