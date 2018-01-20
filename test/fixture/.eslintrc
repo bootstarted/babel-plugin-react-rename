@@ -1,0 +1,3 @@
+rules:
+  metalab/filenames/match-exported: 0
+  metalab/react/prefer-stateless-function: 0

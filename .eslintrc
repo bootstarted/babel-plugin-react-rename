@@ -1,0 +1,7 @@
+extends:
+  - metalab
+  - metalab/react
+rules:
+  metalab/import/no-unresolved: 0
+  metalab/import/named: 0
+  metalab/import/no-duplicates: 0

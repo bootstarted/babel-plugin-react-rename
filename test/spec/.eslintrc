@@ -1,0 +1,5 @@
+env:
+  mocha: true
+  node: true
+rules:
+  metalab/import/no-commonjs: 0
